@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.10.1
+Created-By: 1.8.0_151-b12 (Oracle Corporation)
+Main-Class: org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader
+Rsrc-Main-Class: php.java.bridge.TestInstallation
+Rsrc-Class-Path: ./ WEB-INF/lib/JavaBridge.jar
+Class-Path: .
+

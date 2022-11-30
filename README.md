@@ -11,6 +11,7 @@ Hospital information systems provide a common source of information about a pati
 1. Open the **app/Config/App.php** file with a text editor and set your base URL to `$baseURL`. If you need more flexibility, the baseURL may be set within the **.env** file as `app.baseURL = 'http://example.com/'` . (Always use a trailing slash on your base URL!)
    > **NOTE:** If you don’t set the baseURL correctly, in development mode, the debug toolbar may not load properly and web pages may take considerably longer to display.
 2. If you intend to use a database, open the **app/Config/Database.php** file with a text editor and set your database settings. Alternately, these could be set in your **.env file**.
+
 3. If it is not on the production server, set `CI_ENVIRONMENT` to `development` in **.env** file to take advantage of the debugging tools provided.
    > **IMPORTANT:** In production environments, you should disable error display and any other development-only functionality. In CodeIgniter, this can be done by setting the environment to “production”. By default, the application will run using the “production” environment.
 

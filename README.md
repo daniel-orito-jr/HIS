@@ -4,16 +4,71 @@ Hospital information systems provide a common source of information about a pati
 
 ---
 
+**Installation**
+
+---
+
+HIS is a CodeIgniter application which has two supported installation methods: manual download, or using Composer. I recommend the Composer installation because it keeps CodeIgniter up to date easily.
+
+If you would like the simple `“download & go”` install that CodeIgniter3 is known for, choose the manual installation.
+
+> **NOTE:** Before starting the installation, make sure that your server meets the requirements, in particular the PHP version and the PHP extensions that are needed. You may find that you have to uncomment the php.ini “extension” lines to enable “curl” and “intl”, for instance.
+
+---
+
+**Composer Installation**
+
+---
+
+Composer can be used in several ways to install this app on your system.
+
+The first technique describes creating a skeleton project using the framework, that you would then use as the base for a new webapp. The second technique described below lets you add the framework to an existing webapp,
+
+> **NOTE:** If you are using a Git repository to store your code, or for collaboration with others, then the `vendor` folder would normally be “git ignored”. In such a case, you will need to do a `composer update` when you clone the repository to a new system.
+
+**Installation**
+
+The command above will create a “project-root” folder. If you omit the “project-root” argument, the command will create an “appstarter” folder, which can be renamed as appropriate.
+
+> **NOTE:** CodeIgniter autoloader does not allow special characters that are illegal in filenames on certain operating systems. The symbols that can be used are /, \_, ., :, \ and space. So if you install CodeIgniter under the folder that contains the special characters like (, ), etc., CodeIgniter won’t work.
+
+If you don’t need or want phpunit installed, and all of its composer dependencies, then add the `--no-dev` option to the end of the above command line. That will result in only the framework, and the three trusted dependencies that we bundle, being composer-installed.
+
+A sample such installation command, using the default project-root “appstarter”:
+
+```
+> composer create-project codeigniter4/appstarter --no-dev
+```
+
+After installation, a few initial configurations are required. See Initial Configuration below for the details.
+
+---
+
+**Manual Installation**
+
+---
+
+Download the HIS file version, and extract it to become your project root. Ex: in XAMPP is in HTDOCS. Change all setup in config.php, database.php base on the server you are trying to install it.
+
+> **NOTE:** CodeIgniter autoloader does not allow special characters that are illegal in filenames on certain operating systems. The symbols that can be used are /, \_, ., :, \ and space. So if you install CodeIgniter under the folder that contains the special characters like (, ), etc., CodeIgniter won’t work.
+
+After installation, a few initial configurations are required. See Initial Configuration below for the details.
+
+---
+
 **Initial Configuration**
 
 ---
 
 1. Open the **app/Config/App.php** file with a text editor and set your base URL to `$baseURL`. If you need more flexibility, the baseURL may be set within the **.env** file as `app.baseURL = 'http://example.com/'` . (Always use a trailing slash on your base URL!)
-   > **NOTE:** If you don’t set the baseURL correctly, in development mode, the debug toolbar may not load properly and web pages may take considerably longer to display.
+
+> **NOTE:** If you don’t set the baseURL correctly, in development mode, the debug toolbar may not load properly and web pages may take considerably longer to display.
+
 2. If you intend to use a database, open the **app/Config/Database.php** file with a text editor and set your database settings. Alternately, these could be set in your **.env file**.
 
 3. If it is not on the production server, set `CI_ENVIRONMENT` to `development` in **.env** file to take advantage of the debugging tools provided.
-   > **IMPORTANT:** In production environments, you should disable error display and any other development-only functionality. In CodeIgniter, this can be done by setting the environment to “production”. By default, the application will run using the “production” environment.
+
+> **IMPORTANT:** In production environments, you should disable error display and any other development-only functionality. In CodeIgniter, this can be done by setting the environment to “production”. By default, the application will run using the “production” environment.
 
 > **NOTE:** If running this using a web server (e.g., Apache or Nginx), you will need to modify the permissions for the writable folder inside your project, so that it is writable by the user or account used by your web server.
 

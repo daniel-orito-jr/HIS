@@ -2,6 +2,8 @@
 
 Hospital information systems provide a common source of information about a patient's health history, and doctors schedule timing. The system has to keep data in a secure place and controls who can reach the data in certain circumstances.
 
+https://user-images.githubusercontent.com/109225953/205496297-3dc7c970-b980-481b-8e27-e707bc85dbbb.mp4
+
 ---
 
 **Installation**
